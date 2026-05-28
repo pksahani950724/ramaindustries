@@ -314,7 +314,7 @@ export default function RamaIndustriesWebsite() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold">Location</h4>
-                  <p className="text-gray-400">Jodhpur, Rajasthan, India</p>
+                  <p className="text-gray-400">Unit 10, 1, Udyog Bhavan Rd, Anand Nagar, Additional M.I.D.C, Ambernath, Maharashtra 421506</p>
                 </div>
               </div>
 
@@ -324,7 +324,7 @@ export default function RamaIndustriesWebsite() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold">Phone Number</h4>
-                  <p className="text-gray-400">+91 XXXXX XXXXX</p>
+                  <p className="text-gray-400">+91 82919 87423</p>
                 </div>
               </div>
 
