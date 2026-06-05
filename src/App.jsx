@@ -1,6 +1,7 @@
+import logo from "./assets/logo.webp";
 export default function RamaIndustriesWebsite() {
   return (
-    <div className="bg-[#050816] text-white overflow-hidden font-sans">
+    <div className="bg-white text-slate-900 overflow-hidden font-sans">
       {/* Animated Background */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-500/20 blur-[120px] rounded-full"></div>
@@ -8,15 +9,21 @@ export default function RamaIndustriesWebsite() {
       </div>
 
       {/* Navbar */}
-      <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-          <div>
-            <h1 className="text-3xl font-black tracking-wide text-white">
-              RAMA <span className="text-orange-500">INDUSTRIES</span>
-            </h1>
-          </div>
+        <div className="flex items-center gap-4">
+        <img
+          src={logo}
+          alt="Rama Industries"
+          className="h-14 w-auto"
+        />
 
-          <nav className="hidden lg:flex gap-10 text-sm font-semibold text-gray-300">
+        <div>
+      
+        </div>
+      </div>
+
+          <nav className="hidden lg:flex gap-10 text-sm font-semibold text-slate-600">
             <a href="#home" className="hover:text-orange-500 transition-all">Home</a>
             <a href="#about" className="hover:text-orange-500 transition-all">About</a>
             <a href="#services" className="hover:text-orange-500 transition-all">Services</a>
@@ -24,85 +31,107 @@ export default function RamaIndustriesWebsite() {
             <a href="#contact" className="hover:text-orange-500 transition-all">Contact</a>
           </nav>
 
-          <button className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-full font-semibold shadow-[0_0_30px_rgba(249,115,22,0.6)] transition-all">
-            Get Free Quote
-          </button>
+         <a
+        href="https://wa.me/91829187423?text=Hello%20Rama%20Industries,%20I%20would%20like%20to%20get%20a%20quote."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-full font-semibold text-white shadow-[0_0_30px_rgba(249,115,22,0.6)] transition-all"
+      >
+        Get Free Quote
+      </a>
         </div>
       </header>
 
       {/* Hero */}
       <section
-        id="home"
-        className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/75"></div>
+  id="home"
+  className="relative min-h-screen flex items-center bg-white overflow-hidden"
+>
+  <div className="absolute inset-0">
+    <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-100 blur-[140px] rounded-full"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center pt-32">
-          <div>
-            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-lg border border-white/10 px-5 py-3 rounded-full mb-8">
-              <span className="w-3 h-3 rounded-full bg-orange-500 animate-pulse"></span>
-              <span className="text-sm tracking-widest uppercase text-gray-200">
-                Industrial Engineering Experts
-              </span>
-            </div>
+    <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-100 blur-[140px] rounded-full"></div>
+  </div>
 
-            <h2 className="text-5xl md:text-7xl font-black leading-tight mb-8">
-              Next Generation
-              <span className="block text-orange-500">
-                Manufacturing Solutions
-              </span>
-            </h2>
+  <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 grid lg:grid-cols-2 gap-16 items-center">
 
-            <p className="text-xl text-gray-300 leading-9 mb-10 max-w-2xl">
-              Rama Industries delivers premium CNC machining, fabrication,
-              industrial engineering, automation, and custom manufacturing
-              services with precision, speed, and innovation.
+    <div>
+
+      <div className="inline-flex items-center gap-3 bg-orange-50 border border-orange-100 px-5 py-3 rounded-full mb-8">
+        <span className="w-3 h-3 rounded-full bg-orange-500 animate-pulse"></span>
+
+        <span className="text-sm font-semibold text-orange-600 uppercase tracking-wider">
+          Trusted Industrial Partner
+        </span>
+      </div>
+
+      <h1 className="text-5xl md:text-7xl font-black leading-tight text-slate-900">
+        Engineering
+        <span className="block text-blue-700">
+          Excellence.
+        </span>
+
+        Manufacturing
+        <span className="block text-orange-500">
+          Innovation.
+        </span>
+      </h1>
+
+      <p className="mt-8 text-xl text-slate-600 leading-9 max-w-2xl">
+        Rama Industries provides precision engineering,
+        fabrication, industrial automation and custom
+        manufacturing solutions with unmatched quality
+        and reliability.
+      </p>
+
+      <div className="mt-10 flex flex-wrap gap-5">
+        <a
+  href="https://wa.me/91829187423?text=Hello%20Rama%20Industries,%20I%20am%20interested%20in%20your%20industrial%20services.%20Please%20share%20a%20quotation."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-2xl font-bold shadow-lg transition inline-block"
+>
+  Get Free Quote
+</a>
+
+        <button className="border border-slate-300 px-8 py-4 rounded-2xl font-semibold hover:bg-slate-50 transition">
+          Explore Services
+        </button>
+      </div>
+
+      <div className="grid grid-cols-3 gap-5 mt-16">
+        {[
+          { value: "20+", label: "Years" },
+          { value: "500+", label: "Projects" },
+          { value: "100%", label: "Quality" },
+        ].map((item) => (
+          <div
+            key={item.label}
+            className="bg-white border border-slate-200 shadow-xl rounded-3xl p-6 text-center"
+          >
+            <h3 className="text-3xl font-black text-orange-500">
+              {item.value}
+            </h3>
+
+            <p className="text-slate-600 text-sm">
+              {item.label}
             </p>
-
-            <div className="flex flex-wrap gap-5">
-              <button className="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-2xl text-lg font-bold shadow-[0_0_40px_rgba(249,115,22,0.6)] transition-all hover:scale-105">
-                Explore Services
-              </button>
-
-              <button className="border border-white/30 bg-white/10 backdrop-blur-lg px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-white hover:text-black transition-all">
-                View Projects
-              </button>
-            </div>
-
-            <div className="grid grid-cols-3 gap-6 mt-14">
-              {[
-                { value: '20+', label: 'Years Experience' },
-                { value: '500+', label: 'Projects Delivered' },
-                { value: '100%', label: 'Client Satisfaction' },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl p-6 text-center"
-                >
-                  <h3 className="text-4xl font-black text-orange-500 mb-2">
-                    {item.value}
-                  </h3>
-                  <p className="text-sm text-gray-300">{item.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
+        ))}
+      </div>
 
-          <div className="relative hidden lg:block">
-            <div className="absolute -top-10 -left-10 w-full h-full border border-orange-500/30 rounded-[40px]"></div>
+    </div>
 
-            <img
-              src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2070&auto=format&fit=crop"
-              alt="Industry"
-              className="rounded-[40px] shadow-[0_0_80px_rgba(0,0,0,0.5)] object-cover h-[700px] w-full"
-            />
-          </div>
-        </div>
-      </section>
+    <div>
+      <img
+        src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2000"
+        alt="Industry"
+        className="rounded-[40px] shadow-2xl h-[700px] w-full object-cover"
+      />
+    </div>
+
+  </div>
+</section>
 
       {/* About */}
       <section id="about" className="py-32 relative">
@@ -128,7 +157,7 @@ export default function RamaIndustriesWebsite() {
               Building Modern Industrial Excellence
             </h2>
 
-            <p className="text-lg text-gray-300 leading-9 mb-10">
+            <p className="text-lg text-slate-600 leading-9 mb-10">
               We specialize in precision engineering, heavy fabrication,
               industrial automation, custom manufacturing, and advanced
               machining solutions. Our focus is on innovation, durability,
@@ -144,7 +173,7 @@ export default function RamaIndustriesWebsite() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 border border-white/10 p-6 rounded-3xl backdrop-blur-xl"
+                  className="bg-white border border-slate-200 p-6 rounded-3xl shadow-lg"
                 >
                   <p className="text-lg font-semibold">✓ {item}</p>
                 </div>
@@ -155,7 +184,7 @@ export default function RamaIndustriesWebsite() {
       </section>
 
       {/* Services */}
-      <section id="services" className="py-32 bg-white/[0.03] border-y border-white/10">
+      <section id="services" className="py-32 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
             <p className="text-orange-500 uppercase tracking-[5px] mb-4 font-semibold">
@@ -166,7 +195,7 @@ export default function RamaIndustriesWebsite() {
               Premium Industrial Services
             </h2>
 
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Delivering world-class industrial manufacturing and engineering
               solutions for businesses worldwide.
             </p>
@@ -183,7 +212,7 @@ export default function RamaIndustriesWebsite() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="group bg-gradient-to-b from-white/10 to-white/5 border border-white/10 rounded-[35px] p-10 hover:-translate-y-4 transition-all duration-500 hover:shadow-[0_0_40px_rgba(249,115,22,0.2)]"
+                className="group bg-white border border-slate-200 shadow-lg rounded-[35px] p-10 hover:-translate-y-4 transition-all duration-500 hover:shadow-[0_0_40px_rgba(249,115,22,0.2)]"
               >
                 <div className="w-20 h-20 rounded-3xl bg-orange-500 flex items-center justify-center text-3xl font-black mb-8 group-hover:rotate-6 transition-all">
                   0{index + 1}
@@ -191,7 +220,7 @@ export default function RamaIndustriesWebsite() {
 
                 <h3 className="text-3xl font-bold mb-5">{item}</h3>
 
-                <p className="text-gray-400 leading-8 text-lg">
+                <p className="text-slate-600 leading-8 text-lg">
                   High-performance industrial solutions engineered for maximum
                   efficiency, durability, and precision.
                 </p>
@@ -221,7 +250,7 @@ export default function RamaIndustriesWebsite() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="relative bg-white/5 border border-white/10 rounded-[35px] p-10 backdrop-blur-xl"
+                className="relative bg-white border border-slate-200 shadow-lg rounded-[35px] p-10 backdrop-blur-xl"
               >
                 <div className="text-7xl font-black text-orange-500/30 absolute top-4 right-6">
                   0{index + 1}
@@ -235,7 +264,7 @@ export default function RamaIndustriesWebsite() {
       </section>
 
       {/* Gallery */}
-      <section id="gallery" className="py-32 bg-white/[0.03] border-y border-white/10">
+      <section id="gallery" className="py-32 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
             <p className="text-orange-500 uppercase tracking-[5px] mb-4 font-semibold">
@@ -258,7 +287,7 @@ export default function RamaIndustriesWebsite() {
             ].map((img, index) => (
               <div
                 key={index}
-                className="overflow-hidden rounded-[35px] group border border-white/10"
+                className="overflow-hidden rounded-[35px] group shadow-xl"
               >
                 <img
                   src={img}
@@ -302,7 +331,7 @@ export default function RamaIndustriesWebsite() {
               Let’s Build Something Great Together
             </h2>
 
-            <p className="text-lg text-gray-400 leading-9 mb-12">
+            <p className="text-lg text-slate-600 leading-9 mb-12">
               Connect with our industrial experts for manufacturing,
               fabrication, machining, and engineering requirements.
             </p>
@@ -314,7 +343,7 @@ export default function RamaIndustriesWebsite() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold">Location</h4>
-                  <p className="text-gray-400">Unit 10, 1, Udyog Bhavan Rd, Anand Nagar, Additional M.I.D.C, Ambernath, Maharashtra 421506</p>
+                  <p className="text-slate-600">Unit 10, 1, Udyog Bhavan Rd, Anand Nagar, Additional M.I.D.C, Ambernath, Maharashtra 421506</p>
                 </div>
               </div>
 
@@ -340,30 +369,30 @@ export default function RamaIndustriesWebsite() {
             </div>
           </div>
 
-          <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-[40px] p-10 shadow-2xl">
+          <div className="bg-white border border-slate-200 shadow-2xl rounded-[40px] p-10 shadow-2xl">
             <form className="space-y-6">
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full bg-white/10 border border-white/10 rounded-2xl px-6 py-5 text-white placeholder:text-gray-400 outline-none"
+                className="w-full bg-slate-50 border border-slate-200 text-slate-900 placeholder:text-slate-400 rounded-2xl px-6 py-5 placeholder:text-gray-400 outline-none"
               />
 
               <input
                 type="email"
                 placeholder="Your Email"
-                className="w-full bg-white/10 border border-white/10 rounded-2xl px-6 py-5 text-white placeholder:text-gray-400 outline-none"
+                className="w-full bg-slate-50 border border-slate-200 text-slate-900 placeholder:text-slate-400 rounded-2xl px-6 py-5 placeholder:text-gray-400 outline-none"
               />
 
               <input
                 type="text"
                 placeholder="Phone Number"
-                className="w-full bg-white/10 border border-white/10 rounded-2xl px-6 py-5 text-white placeholder:text-gray-400 outline-none"
+                className="w-full bg-slate-50 border border-slate-200 text-slate-900 placeholder:text-slate-400 rounded-2xl px-6 py-5 placeholder:text-gray-400 outline-none"
               />
 
               <textarea
                 rows="6"
                 placeholder="Tell us about your project"
-                className="w-full bg-white/10 border border-white/10 rounded-2xl px-6 py-5 text-white placeholder:text-gray-400 outline-none"
+                className="w-full bg-slate-50 border border-slate-200 text-slate-900 placeholder:text-slate-400 rounded-2xl px-6 py-5 placeholder:text-gray-400 outline-none"
               ></textarea>
 
               <button className="w-full bg-orange-500 hover:bg-orange-600 py-5 rounded-2xl text-xl font-bold shadow-[0_0_40px_rgba(249,115,22,0.5)] transition-all hover:scale-[1.02]">
@@ -375,10 +404,14 @@ export default function RamaIndustriesWebsite() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 py-12 text-center text-gray-400">
-        <h3 className="text-3xl font-black text-white mb-4">
-          RAMA <span className="text-orange-500">INDUSTRIES</span>
-        </h3>
+      <footer className="border-t border-slate-200 py-12 text-center text-slate-500 bg-white">
+       <div className="flex justify-center mb-6">
+  <img
+    src={logo}
+    alt="Rama Industries"
+    className="h-16"
+  />
+</div>
 
         <p className="text-lg">
           © 2026 Rama Industries. All Rights Reserved.
