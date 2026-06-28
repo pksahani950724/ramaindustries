@@ -1,5 +1,101 @@
 import logo from "./assets/logo.webp";
+import about_us from "./assets/img/about_us.png";
+import home from "./assets/img/home.png";
+import machine from "./assets/img/machine_list.png";
+import { useState } from "react";
+const services = [
+  {
+    title: "CNC Machining",
+    description:
+      "High-precision machining for complex and critical components.",
+    items: [
+      "CNC Milling",
+      "CNC Turning",
+      "Surface Grinding",
+      "Precision Component Manufacturing",
+      "Batch Production",
+      "Prototype Development",
+    ],
+  },
+  {
+    title: "Fabrication & Assembly",
+    description:
+      "Complete fabrication solutions for industrial applications.",
+    items: [
+      "Sheet Metal Fabrication",
+      "Structural Fabrication",
+      "Industrial Welding",
+      "Sub-Assembly",
+      "Mechanical Assembly",
+      "Custom Fabricated Components",
+    ],
+  },
+  {
+    title: "Engineering Support",
+    description:
+      "Helping customers accelerate product development.",
+    items: [
+      "Product Development Support",
+      "Reverse Engineering",
+      "Design Assistance",
+      "Prototype Manufacturing",
+      "Process Optimization",
+      "Technical Consultation",
+    ],
+  },
+  {
+    title: "Tooling, Jigs & Fixtures",
+    description:
+      "Custom tooling solutions designed to improve productivity and repeatability.",
+    items: [
+      "Fixture Design & Manufacturing",
+      "Production Tooling",
+      "Inspection Fixtures",
+      "Assembly Fixtures",
+      "Custom Manufacturing Solutions",
+    ],
+  },
+  {
+    title: "Surface Treatment & Finishing",
+    description:
+      "Enhancing performance, durability, and appearance.",
+    items: [
+      "Industrial Coating",
+      "Painting",
+      "Polishing",
+      "Anodizing",
+      "Powder Coating",
+      "Surface Protection Treatments",
+    ],
+  },
+  {
+    title: "Automation & Supply Support",
+    description:
+      "Supporting modern manufacturing requirements.",
+    items: [
+      "Automation Integration Support",
+      "Robotics Assistance",
+      "Material Sourcing",
+      "Specialized Component Supply",
+      "Vendor Development Support",
+    ],
+  },
+];
+
 export default function RamaIndustriesWebsite() {
+  const [files, setFiles] = useState([]);
+
+const handleFileChange = (e) => {
+  setFiles(Array.from(e.target.files));
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  console.log("Files:", files);
+
+  // Here you can send FormData to your backend
+};
   return (
     <div className="bg-white text-slate-900 overflow-hidden font-sans">
       {/* Animated Background */}
@@ -66,22 +162,19 @@ export default function RamaIndustriesWebsite() {
       </div>
 
       <h1 className="text-5xl md:text-7xl font-black leading-tight text-slate-900">
-        Engineering
+        Precision 
         <span className="block text-blue-700">
-          Excellence.
+          Manufacturing
         </span>
 
-        Manufacturing
+        Engineering
         <span className="block text-orange-500">
-          Innovation.
+          Solutions.
         </span>
       </h1>
 
       <p className="mt-8 text-xl text-slate-600 leading-9 max-w-2xl">
-        Rama Industries provides precision engineering,
-        fabrication, industrial automation and custom
-        manufacturing solutions with unmatched quality
-        and reliability.
+       Rama Industries is a trusted manufacturing and engineering solutions company specializing in precision CNC machining, fabrication, assembly, tooling, and industrial product development. Backed by over 20 years of manufacturing expertise, we deliver high-accuracy components and end-to-end production support for demanding industries.
       </p>
 
       <div className="mt-10 flex flex-wrap gap-5">
@@ -94,9 +187,9 @@ export default function RamaIndustriesWebsite() {
   Get Free Quote
 </a>
 
-        <button className="border border-slate-300 px-8 py-4 rounded-2xl font-semibold hover:bg-slate-50 transition">
+        {/* <button className="border border-slate-300 px-8 py-4 rounded-2xl font-semibold hover:bg-slate-50 transition">
           Explore Services
-        </button>
+        </button> */}
       </div>
 
       <div className="grid grid-cols-3 gap-5 mt-16">
@@ -124,7 +217,7 @@ export default function RamaIndustriesWebsite() {
 
     <div>
       <img
-        src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2000"
+       src={about_us}
         alt="Industry"
         className="rounded-[40px] shadow-2xl h-[700px] w-full object-cover"
       />
@@ -154,22 +247,19 @@ export default function RamaIndustriesWebsite() {
             </p>
 
             <h2 className="text-5xl md:text-6xl font-black leading-tight mb-8">
-              Building Modern Industrial Excellence
+              Engineering Excellence Built on Experience
             </h2>
 
             <p className="text-lg text-slate-600 leading-9 mb-10">
-              We specialize in precision engineering, heavy fabrication,
-              industrial automation, custom manufacturing, and advanced
-              machining solutions. Our focus is on innovation, durability,
-              quality assurance, and long-term industrial partnerships.
+            Rama Industries is a precision manufacturing company headquartered in Thane, Maharashtra. Established with a vision to provide world-class engineering solutions, we combine modern manufacturing technology with practical industry expertise to serve customers across multiple sectors.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                'Advanced CNC Machines',
-                'Skilled Engineering Team',
-                'Premium Quality Control',
-                'Fast Production & Delivery',
+                'Precision in Every Component',
+                'Quality in Every Process',
+                'Reliability in Every Delivery',
+                'Long-term Customer Partnerships ',
               ].map((item, index) => (
                 <div
                   key={index}
@@ -196,42 +286,45 @@ export default function RamaIndustriesWebsite() {
             </h2>
 
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Delivering world-class industrial manufacturing and engineering
-              solutions for businesses worldwide.
+             Comprehensive Engineering & Manufacturing Solutions
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10">
-            {[
-              'CNC Machining',
-              'Heavy Fabrication',
-              'Industrial Automation',
-              'Prototype Development',
-              'Machine Maintenance',
-              'Custom Manufacturing',
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="group bg-white border border-slate-200 shadow-lg rounded-[35px] p-10 hover:-translate-y-4 transition-all duration-500 hover:shadow-[0_0_40px_rgba(249,115,22,0.2)]"
-              >
-                <div className="w-20 h-20 rounded-3xl bg-orange-500 flex items-center justify-center text-3xl font-black mb-8 group-hover:rotate-6 transition-all">
-                  0{index + 1}
-                </div>
+         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10">
+  {services.map((service, index) => (
+    <div
+      key={index}
+      className="group bg-white border border-slate-200 shadow-lg rounded-[35px] p-10 hover:-translate-y-4 transition-all duration-500 hover:shadow-[0_0_40px_rgba(249,115,22,0.2)]"
+    >
+      <div className="w-20 h-20 rounded-3xl bg-orange-500 text-white flex items-center justify-center text-3xl font-black mb-8 group-hover:rotate-6 transition-all">
+        {String(index + 1).padStart(2, "0")}
+      </div>
 
-                <h3 className="text-3xl font-bold mb-5">{item}</h3>
+      <h3 className="text-3xl font-bold mb-4">{service.title}</h3>
 
-                <p className="text-slate-600 leading-8 text-lg">
-                  High-performance industrial solutions engineered for maximum
-                  efficiency, durability, and precision.
-                </p>
-              </div>
-            ))}
-          </div>
+      <p className="text-slate-600 leading-7 mb-6">
+        {service.description}
+      </p>
+
+      <ul className="space-y-3">
+        {service.items.map((item, i) => (
+          <li
+            key={i}
+            className="flex items-start text-slate-700"
+          >
+            <span className="text-orange-500 mr-3 mt-1">✓</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</div>
         </div>
       </section>
 
       {/* Process */}
-      <section className="py-32">
+      {/* <section className="py-32">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <p className="text-orange-500 uppercase tracking-[5px] mb-4 font-semibold">
             Workflow
@@ -261,7 +354,7 @@ export default function RamaIndustriesWebsite() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Gallery */}
       <section id="gallery" className="py-32 bg-slate-50">
@@ -272,30 +365,19 @@ export default function RamaIndustriesWebsite() {
             </p>
 
             <h2 className="text-5xl md:text-6xl font-black">
-              Workshop & Machinery
+              Our Machineries
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {[
-              'https://images.unsplash.com/photo-1494412651409-8963ce7935a7?q=80&w=1974&auto=format&fit=crop',
-              'https://images.unsplash.com/photo-1581092335397-9583eb92d232?q=80&w=1974&auto=format&fit=crop',
-              'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1974&auto=format&fit=crop',
-              'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1974&auto=format&fit=crop',
-               'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1974&auto=format&fit=crop',
-              'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1974&auto=format&fit=crop',
-            ].map((img, index) => (
-              <div
-                key={index}
-                className="overflow-hidden rounded-[35px] group shadow-xl"
-              >
-                <img
-                  src={img}
-                  className="h-[350px] w-full object-cover group-hover:scale-110 transition-all duration-700"
-                />
-              </div>
-            ))}
+         <div className="grid grid-cols-1">
+          <div className="overflow-hidden rounded-[35px] shadow-xl group">
+            <img
+              src={machine}
+              alt="Manufacturing Facility"
+              className="w-full h-[550px] object-cover group-hover:scale-105 transition-all duration-700"
+            />
           </div>
+        </div>
         </div>
       </section>
 
@@ -363,43 +445,140 @@ export default function RamaIndustriesWebsite() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold">Email Address</h4>
-                  <p className="text-gray-400">info@ramaindustries.com</p>
+                  <p className="text-gray-400">business@ramaind.co.in</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-white border border-slate-200 shadow-2xl rounded-[40px] p-10 shadow-2xl">
-            <form className="space-y-6">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full bg-slate-50 border border-slate-200 text-slate-900 placeholder:text-slate-400 rounded-2xl px-6 py-5 placeholder:text-gray-400 outline-none"
-              />
+        <div className="bg-white border border-slate-200 rounded-[40px] p-10 shadow-2xl">
+  <form onSubmit={handleSubmit} className="space-y-6">
 
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full bg-slate-50 border border-slate-200 text-slate-900 placeholder:text-slate-400 rounded-2xl px-6 py-5 placeholder:text-gray-400 outline-none"
-              />
+    <input
+      type="text"
+      placeholder="Your Name"
+      required
+      className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-5 outline-none focus:border-orange-500"
+    />
 
-              <input
-                type="text"
-                placeholder="Phone Number"
-                className="w-full bg-slate-50 border border-slate-200 text-slate-900 placeholder:text-slate-400 rounded-2xl px-6 py-5 placeholder:text-gray-400 outline-none"
-              />
+    <input
+      type="email"
+      placeholder="Your Email"
+      required
+      className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-5 outline-none focus:border-orange-500"
+    />
 
-              <textarea
-                rows="6"
-                placeholder="Tell us about your project"
-                className="w-full bg-slate-50 border border-slate-200 text-slate-900 placeholder:text-slate-400 rounded-2xl px-6 py-5 placeholder:text-gray-400 outline-none"
-              ></textarea>
+    <input
+      type="text"
+      placeholder="Phone Number"
+      required
+      className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-5 outline-none focus:border-orange-500"
+    />
 
-              <button className="w-full bg-orange-500 hover:bg-orange-600 py-5 rounded-2xl text-xl font-bold shadow-[0_0_40px_rgba(249,115,22,0.5)] transition-all hover:scale-[1.02]">
-                Send Inquiry
-              </button>
-            </form>
-          </div>
+    <input
+      type="text"
+      placeholder="Company Name"
+      className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-5 outline-none focus:border-orange-500"
+    />
+
+    <textarea
+      rows="5"
+      placeholder="Tell us about your project"
+      className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-5 outline-none focus:border-orange-500"
+    ></textarea>
+
+    {/* File Upload */}
+    <div>
+
+      <label className="block text-slate-700 font-semibold mb-3">
+        Attach Drawings / Files
+      </label>
+
+      <label
+        htmlFor="attachments"
+        className="flex flex-col items-center justify-center w-full p-8 border-2 border-dashed border-slate-300 rounded-2xl cursor-pointer bg-slate-50 hover:bg-orange-50 hover:border-orange-500 transition"
+      >
+
+        <svg
+          className="w-12 h-12 text-orange-500 mb-3"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M7 16V8a5 5 0 0110 0v8a3 3 0 11-6 0V9"
+          />
+        </svg>
+
+        <p className="font-semibold">
+          Click to Upload Files
+        </p>
+
+        <p className="text-sm text-slate-500 mt-2">
+          PDF, DOC, DOCX, XLS, ZIP, JPG, PNG, STEP , STP (Multiple Files Allowed)
+        </p>
+
+        <input
+          id="attachments"
+          type="file"
+          multiple
+          accept=".pdf,.doc,.docx,.xls,.xlsx,.zip,.jpg,.jpeg,.png,.dwg,.dxf,.step,.stp"
+          onChange={handleFileChange}
+          className="hidden"
+        />
+      </label>
+
+    </div>
+
+    {/* Selected Files */}
+
+    {files.length > 0 && (
+
+      <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+
+        <h4 className="font-bold mb-3">
+          Selected Files ({files.length})
+        </h4>
+
+        <div className="space-y-2">
+
+          {files.map((file, index) => (
+
+            <div
+              key={index}
+              className="flex justify-between items-center bg-white p-3 rounded-xl border"
+            >
+
+              <span className="truncate text-sm">
+                📄 {file.name}
+              </span>
+
+              <span className="text-xs text-slate-500">
+                {(file.size / 1024 / 1024).toFixed(2)} MB
+              </span>
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+    )}
+
+    <button
+      type="submit"
+      className="w-full bg-orange-500 hover:bg-orange-600 text-white py-5 rounded-2xl text-xl font-bold transition duration-300 shadow-lg hover:shadow-orange-300"
+    >
+      Send Inquiry
+    </button>
+
+  </form>
+</div>
         </div>
       </section>
 
